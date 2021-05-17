@@ -27,7 +27,9 @@ finale.initialize({
 // Create REST resource
 var userResource = finale.resource({
     model: userModel,
-    endpoints: ['/users', '/users/:id']
+    endpoints: ['/users', '/users/:id'],
+    // excludeAttributes: ['Role'],
+    readOnlyAttributes: ['Role']
 });
 
 app.use('/', indexRouter);
