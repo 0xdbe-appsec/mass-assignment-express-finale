@@ -13,7 +13,7 @@ npm install
 - Init database
 
 ```
-NODE_ENV="dev" sequelize-cli db:migrate
+NODE_ENV="dev" npx sequelize-cli db:migrate
 ```
 
 - Run
