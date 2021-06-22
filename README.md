@@ -33,11 +33,13 @@ DATA='{"Login":"hobbit","firstName":"Frodon","lastName":"Sacquet"}'
 ```
 curl --header "Content-Type: application/json" \
   --request POST \
-  --data $DATA' \
+  --data $DATA \
   http://localhost:3000/users
 ```
 
 Look into the HTTP response: How to exploit Mass Assignment Attack ?
+
+## Hack
 
 - Signup as Admin (using Mass Assignment Attack)
 
