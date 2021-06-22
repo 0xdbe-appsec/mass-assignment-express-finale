@@ -28,7 +28,7 @@ finale.initialize({
 var userResource = finale.resource({
     model: userModel,
     endpoints: ['/users', '/users/:id'],
-    // excludeAttributes: ['Role'],
+    //excludeAttributes: ['Role'],
     readOnlyAttributes: ['Role']
 });
 

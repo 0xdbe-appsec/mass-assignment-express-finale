@@ -33,11 +33,13 @@ DATA='{"Login":"hobbit","firstName":"Frodon","lastName":"Sacquet"}'
 ```
 curl --header "Content-Type: application/json" \
   --request POST \
-  --data $DATA' \
+  --data $DATA \
   http://localhost:3000/users
 ```
 
 Look into the HTTP response: How to exploit Mass Assignment Attack ?
+
+## Hack
 
 - Signup as Admin (using Mass Assignment Attack)
 
@@ -56,4 +58,16 @@ curl --header "Content-Type: application/json" \
 
 ```
 curl http://localhost:3000/users | jq
+```
+
+## Fix
+
+Add one of the following attributes on Finale resource:
+
+```
+excludeAttributes: ['Role']
+```
+
+```
+readOnlyAttributes: ['Role']
 ```
